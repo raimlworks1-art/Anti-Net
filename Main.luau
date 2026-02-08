@@ -165,7 +165,11 @@ end
     return Funcs, Remotes
 end
 
-local ok, err = pcall(Net.Decrypt)
-if not ok then
-    Log.log("F", "Failed to run Net.Decrypt | " .. tostring(err))
+if R then
+    local run, res = pcall(Net.Decrypt)
+    if not run then 
+        Log.log("F", "Failed To Run | ", res)
+    end
 end
+
+return Net
