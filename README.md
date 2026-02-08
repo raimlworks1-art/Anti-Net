@@ -54,7 +54,7 @@ getgenv().Config = {
 }
 
 -- Load and run
-local Net = loadstring(game:HttpGet("[your-url]"))()
+local Net = loadstring(game:HttpGet("https://raw.githubusercontent.com/raimlworks1-art/Anti-Net/refs/heads/main/Main.luau"))()
 ```
 
 ### Targeted Decryption
@@ -66,7 +66,7 @@ getgenv().Config = {
     Path = game.ReplicatedStorage.RemotesFolder
 }
 
-local Net = loadstring(game:HttpGet("[your-url]"))()
+local Net = loadstring(game:HttpGet("https://raw.githubusercontent.com/raimlworks1-art/Anti-Net/refs/heads/main/Main.luau"))()
 ```
 
 ### Manual Decryption
