@@ -51,7 +51,7 @@ Net.Decrypt = function()
 
     -- if Path was set to nil then the Decryptor will use this
     if not P then
-       for _, C in pairs(GC(true)) do
+       for _, C in pairs(getgc(true)) do
         if type(C) ~= "function" then
             continue
         end
