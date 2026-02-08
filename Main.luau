@@ -39,8 +39,7 @@ local R = Config.Runtime
 local P = Config.Path
 
 function GC(Parm)
-   local suc, res = pcall(getgc(), Parm)
-   return suc, res or {}
+   return getgc(Parm)
 end
 
 Net.Decrypt = function()
@@ -51,7 +50,7 @@ Net.Decrypt = function()
 
     -- if Path was set to nil then the Decryptor will use this
     if not P then
-       for _, C in pairs(getgc(true)) do
+       for _, C in pairs(GC(true)) do
         if type(C) ~= "function" then
             continue
         end
